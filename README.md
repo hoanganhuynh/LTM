@@ -70,8 +70,7 @@ String data = new String(goinhan.getData(), 0, goinhan.getLength());
 # Nhận dữ liệu về lưu vào biến *dữ liệu*
 ```java
 @include($socketTCP);
-
-byte[] newByte = new byte[60000];
+@include($tao_mang_byte);
 int len = is.read(newByte);
 String dulieu = new String(newByte, 0, len);
 ```
