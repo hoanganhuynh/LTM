@@ -20,7 +20,7 @@ int len = f.available();
 byte[] b = new byte[len];
 f.read(b);
 f.close();
-String dataFromFile = new String(b,0,b.length);
+String dataFromFile = new String(b,0 , b.length);
 ```
 
 # Ghi dữ liệu vào File ketqua.txt
@@ -64,9 +64,9 @@ ds.receive(goinhan);
 String data = new String(goinhan.getData(), 0, goinhan.getLength());
 ```
 
-# Nhận dữ liệu về lưu vào biến dữ liệu
+# Nhận dữ liệu về lưu vào biến *dữ liệu*
 ```java
-@inclule($socketTCP);
+@include($socketTCP);
 
 byte[] newByte = new byte[60000];
 int len = is.read(newByte);
