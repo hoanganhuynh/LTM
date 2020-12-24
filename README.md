@@ -63,9 +63,10 @@ os.write(passwordStr);
 ```
 
 # Nhận gói tin về lưu vào biến data
+[a](#tao_mang_byte)
 ```java
 @include($tao_mang_byte);
-[a](#tao_mang_byte)
+
 DatagramSocket ds = new DatagramSocket();
 DatagramPacket goinhan = new DatagramPacket(newByte, 60000);
 ds.receive(goinhan);
