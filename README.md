@@ -43,6 +43,7 @@ int len = outputFile.length;
 InetAddress dc = InetAddress.getByName(diachi);
 DatagramPacket output = new DatagramPacket(outputFile, len, dc, congUDP);
 ds.send(output);
+ds.close();
 ```
 
 # Gửi dữ liệu có xuống hàng bằng TCP
@@ -54,7 +55,6 @@ pw.println(text);
 # Gửi dữ liệu không xuống hàng bằng TCP
 ```java
 @inclule($socketTCP);
-
 os.write(passwordStr);
 ```
 
@@ -64,6 +64,7 @@ os.write(passwordStr);
 DatagramSocket ds = new DatagramSocket();
 DatagramPacket goinhan = new DatagramPacket(newByte, 60000);
 ds.receive(goinhan);
+ds.close();
 String data = new String(goinhan.getData(), 0, goinhan.getLength());
 ```
 
