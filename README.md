@@ -45,7 +45,7 @@ DatagramSocket ds = new DatagramSocket();
 byte[] outputFile = text.getBytes();
 int len = outputFile.length;
 InetAddress dc = InetAddress.getByName(diachi);
-DatagramPacket output = new DatagramPacket(outputFile, len, dc, congUDP);
+DatagramPacket output = new DatagramPacket(outputFile, len, dc, cong);
 ds.send(output);
 ds.close();
 ```
