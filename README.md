@@ -8,6 +8,18 @@ int cong = 8080;
 ```java
 String IP = InetAddress.getLocalHost().getHostAddress();
 ```
+### Đảo chuỗi
+[@include($tao_mang_byte)](#tao_mang_byte)
+```java
+byte[] b = text.getBytes();
+int len = b.length;
+for(int i=0; i<(len1/2); i++) {
+  byte temp = b[i];
+  b[i] = b[len-1-i];
+  b[len-1-i] = temp;
+}
+String ketqua = new String(b, 0, len);
+```
 # @socketTCP
 ```java
 Socket s = new Socket(diachi, cong);
