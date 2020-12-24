@@ -9,6 +9,7 @@ int cong = 8080;
 Socket s = new Socket(diachi, cong);
 InputStream is = s.getInputStream();
 OutputStream os = s.getOutputStream();
+PrintWriter pw = new PrintWriter(os, true);
 ```
 
 
@@ -44,8 +45,6 @@ ds.send(output);
 # Gửi dữ liệu có xuống hàng bằng TCP
 ```java
 @inclule($socketTCP);
-
-PrintWriter pw = new PrintWriter(os, true);
 pw.println(text);
 ```
 
