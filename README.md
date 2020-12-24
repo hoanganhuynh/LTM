@@ -63,7 +63,7 @@ os.write(passwordStr);
 ```
 
 # Nhận gói tin về lưu vào biến data
-[@include($tao_mang_byte)](#tao_mang_bye)
+[@include($tao_mang_byte)](#tao_mang_byte)
 ```java
 DatagramSocket ds = new DatagramSocket();
 DatagramPacket goinhan = new DatagramPacket(newByte, 60000);
@@ -79,7 +79,7 @@ int len = is.read(newByte);
 String dulieu = new String(newByte, 0, len);
 ```
 # Join vào Group Multicast để nhận File
-[@include($tao_mang_byte)](#tao_mang_bye)
+[@include($tao_mang_byte)](#tao_mang_byte)
 ```java
 MulticastSocket s = null;
 s = new MulticastSocket(cong);
