@@ -4,6 +4,10 @@ String text = "hello";
 String diachi = "172.0.0.1";
 int cong = 8080;
 ```
+### Lấy địa chỉ IP
+```java
+String IP = InetAddress.getLocalHost().getHostAddress();
+```
 # @socketTCP
 ```java
 Socket s = new Socket(diachi, cong);
