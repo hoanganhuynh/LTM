@@ -11,9 +11,12 @@ InputStream is = s.getInputStream();
 OutputStream os = s.getOutputStream();
 PrintWriter pw = new PrintWriter(os, true);
 ```
+# @tao_mang_byte
+```java
+byte[] newByte = new byte[60000];
+```
 
-
-# Đọc dữ liệu từ File data.txt
+# Đọc dữ liệu từ File *data.txt*
 ```java
 FileInputStream f = new FileInputStream("data.txt");
 int len = f.available();
@@ -23,7 +26,7 @@ f.close();
 String dataFromFile = new String(b,0 , b.length);
 ```
 
-# Ghi dữ liệu vào File ketqua.txt
+# Ghi dữ liệu vào File *ketqua.txt*
 ```java
 byte[] b = text.getBytes();
 int n = b.length;
@@ -57,8 +60,8 @@ os.write(passwordStr);
 
 # Nhận gói tin về lưu vào biến data
 ```java
+@include($tao_mang_byte);
 DatagramSocket ds = new DatagramSocket();
-byte[] newByte = new byte[60000];
 DatagramPacket goinhan = new DatagramPacket(newByte, 60000);
 ds.receive(goinhan);
 String data = new String(goinhan.getData(), 0, goinhan.getLength());
