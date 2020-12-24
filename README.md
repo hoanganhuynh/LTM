@@ -79,3 +79,12 @@ String data = new String(goinhan.getData(), 0, goinhan.getLength());
 int len = is.read(newByte);
 String dulieu = new String(newByte, 0, len);
 ```
+# Join vào Group Multicast để nhận File
+```java
+MulticastSocket s = null;
+s = new MulticastSocket(cong);
+s.joinGroup(diachi);
+@include($tao_mang_byte);
+DatagramPacket goinhan = new DatagramPacket(newByte, newByte.length);
+s.receive(goinhan);
+String data = new String(newByte, 0, goinhan.getLength());
