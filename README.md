@@ -20,6 +20,10 @@ for(int i=0; i<(len1/2); i++) {
 }
 String ketqua = new String(b, 0, len);
 ```
+hoặc
+```java
+String passReverse = new StringBuilder(text).reverse().toString();
+```
 # @socketTCP
 ```java
 Socket s = new Socket(diachi, cong);
