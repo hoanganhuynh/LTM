@@ -51,8 +51,9 @@ public class trainClient {
             OutputStream os = s.getOutputStream();
             PrintWriter pw = new PrintWriter(os, true);
 
-            // 7.Gui mat khau co xuong dòng qua Server
-            pw.println(passwordStr);
+            // 7.Gui có xuống dòng mat khau đã được đảo ngược qua Server
+            String passReverse = new StringBuilder(passwordStr).reverse().toString();
+            pw.println(passReverse);
 
             // 8, 9, 10 Nhan du lieu tu Server
             byte[] bb = new byte[60000];
