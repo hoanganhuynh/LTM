@@ -51,22 +51,20 @@ ds.close();
 ```
 
 # Gửi dữ liệu có xuống hàng bằng TCP
+[@include($sockettcp)](#sockettcp)
 ```java
-@inclule($socketTCP);
 pw.println(text);
 ```
 
 # Gửi dữ liệu không xuống hàng bằng TCP
+[@include($sockettcp)](#sockettcp)
 ```java
-@inclule($socketTCP);
 os.write(passwordStr);
 ```
 
 # Nhận gói tin về lưu vào biến data
-[a](#tao_mang_byte)
+[@include($tao_mang_byte)](#tao_mang_bye)
 ```java
-@include($tao_mang_byte);
-
 DatagramSocket ds = new DatagramSocket();
 DatagramPacket goinhan = new DatagramPacket(newByte, 60000);
 ds.receive(goinhan);
@@ -75,18 +73,17 @@ String data = new String(goinhan.getData(), 0, goinhan.getLength());
 ```
 
 # Nhận dữ liệu về lưu vào biến *dữ liệu*
+
 ```java
-@include($socketTCP);
-@include($tao_mang_byte);
 int len = is.read(newByte);
 String dulieu = new String(newByte, 0, len);
 ```
 # Join vào Group Multicast để nhận File
+[@include($tao_mang_byte)](#tao_mang_bye)
 ```java
 MulticastSocket s = null;
 s = new MulticastSocket(cong);
 s.joinGroup(diachi);
-@include($tao_mang_byte);
 DatagramPacket goinhan = new DatagramPacket(newByte, newByte.length);
 s.receive(goinhan);
 String data = new String(newByte, 0, goinhan.getLength());
